@@ -1,0 +1,73 @@
+{{DISPLAYTITLE:Guide:B0aty HCIM Guide V3}}
+{{Guide|B0aty}}
+== [[B0aty]] HCIM Guide v3.0 (70 Herblore Brickwall) ==
+Tpapa created this guide & I stole it and created it to try and be as non-competitive as possible with other players to hopefully prevent early bottlenecking. It is a [[Ironman]]/[[HCIM]] route to [[Song of the Elves]] completion with little downtime for 70 [[herblore]] requirement. We also complete [[Recipe for Disaster]], [[Perilous Moons|Moons of Peril]], [[Royal Titans]] & maybe [[Piety]]. Throughout play ALL lamps go to Herblore. If the guide mentions 'Continue/Continue until/Complete X quest, you can start a quest helper for this quest and follow as directed. There is a LOT of multi-questing so you will be ignoring Quest Helper a lot. Main account alt recommended but not required for any steps.
+
+Do all [[Random Events]] except: [[Maze]], [[Mime (Random Event)|Mime]], [[Drill Demon|Camo]] & [[Gravedigger]]
+
+This guide DOES NOT include any [[LMS]] but if you enjoy LMS and enjoy [[PvP]] or want to learn a bit, I HEAVILY advise going to LMS at 750 total and getting [[Rune Arrow]]s to [[Alch]] while questing.
+
+I would heavily recommend the 'Time Tracking & Time Tracking Reminder' plugins. You want to do a Farm Run & [[Birdhouse run]] almost any time you are withdrawing new gear for the next step if they are ready. IT IS NOT WORTH teleporting out of [[slayer]] tasks and mid [[quest]] to do these.
+
+Keep 2x Seeds in Seed Vault at all times for contracts. Only do a herb run when you have a surplus of 5-6 seeds
+
+As there is a hard 70 [[Agility]] requirement for Song of the Elves, it is extremely efficient to get this completed as soon as possible even though agility sucks as you will then have improved energy restoration, [[Graceful]] & 1M+ [[Coins]] from [[Agility Pyramid]] before starting. You will have to get 70 Agility anyway and the methods don't viably improve. Some optional methods to make early fast GP on accounts this guide doesn't mention:
+
+* Early [[revenants]] (initial 100k required)
+* 1+1 [[Soul wars]] (40 combat requirement)
+* LMS Rune Arrows (750 total req+30QP req)
+* [[Blackjacking]] with [[Rogue equipment]]
+* Agility Pyramid
+* [[Eclipse Red]]'s
+
+Upon creating your account, DO NOT choose a username with the words or phrases ‘Iron’ ‘HC’ ‘Fe’, 'GIM', 'GIMP'. This is the most important step of the guide.
+
+Use all Lamps on Herblore after quest is complete unless specified
+
+A lot of the time the guide will assume you have combat gear on you. Sometimes it is specified, sometimes it is not. I would always have a weapon/ammunition on you to kill monsters. Magic solves almost every fight except for [[Black Knight Titan]]
+
+===Guide specific terminology===
+'''Macroquesting:''' Macroquesting is the process of completing multiple quests simultaneously, progressing your account in an "optimal" way, ensuring that the maximum number of quests are being done during any given visit to an area. It's a crucial part of efficient gameplay, for use when making alternate (possibly Ironman) accounts. For a given style of gameplay, it's theoretically possible to "solve" the exact chain of quest steps and item gathering grinds, however there is currently insufficient data in a suitable format to build such a solver.
+
+==Guide==
+
+===Episode 1 - Banks 1 through 24:===
+{{Youtube|r3IV6Ix3T_o}}
+
+{{Checklist|title=Starting out|
+* All Settings -> Disable level-up
+* Talk to [[Father Aereck]] (3,1) [Restless Ghost]
+* Pickpocket a man/woman [Lumbridge Easy Diary]
+* Head North-West to [[Magic combat tutor]] & drop Air & Mind Runes and claim more.
+* Sell Bronze Dagger, Sword, Wooden Shield & Shortbow to General Store. Buy a Spade Chisel & hammer
+* Head East & Start X Marks the Spot on Veos (2,1) & complete the first step (Install Quest Helper plug in on Runelite)
+* Check playtime on [[Hans]] [Lumbridge Easy Diary]
+* Go upstairs and Talk to [[Duke Horacio]] (1,1) [Rune Mysteries]
+* Go upstairs again and Collect 4x logs on the top floor [Tree Gnome Village]
+* Bank at Lumbridge castle top floor and deposit all
+* Keep the Shrimps in your bank for later [Family Crest Quest]
+* Move Coins into first bank slot & Runes to the top slots. Click the lock to Always set Placeholders. Set Bank pin for Count Check randoms or delete the pin from Tutorial Island.
+}}
+
+{{Extimage|https://i.imgur.com/lL5AVEI.png|right|300|}}
+{{Var| bankNumber | 0 }}
+<!-- Bank 1 -->
+{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
+* Withdraw: Coins, Air Runes, Mind Runes, Bread, Spade, Tinderbox, Air Talisman, Treasure Scroll (8 Inventory slots)
+* Go down south staircase twice
+* Collect the Empty Jug, Bowl & Knife in Lumbridge kitchen
+* Fill the jug & bowl on the sink in the kitchen [Monk's Friend]
+* Complete 2nd Step of X Marks The Spot
+* Kill a giant rat with Wind Strike and collect the Bones + Raw Rat Meat [Druidic Ritual]
+* Head West towards Draynor hugging the fence to avoid the Jail Guards
+* Talk to [[Father Urhney]] in the lumbridge swamp for Ghost Speak Amulet. (2,1) Wield this.
+* Take Leather Gloves on the table inside his house & wield
+* Head to the Wizards Tower
+* Take Leather Boots off the table & wield
+* Collect 3x Logs next to the stairs [Tree Gnome Village]
+* Head to the basement & Talk to [[Sedridor]] to continue Rune Mysteries (1,2,1)
+* Kill a Chicken. Take Everything (Make sure you get a feather, else hop worlds and repeat)[Client of Kourend + Druidic Ritual]
+* Collect 3x Logs [Tree Gnome Village]
+* Return to Draynor & talk to [[Friendly Forester]] and obtain Forestry kit (right click shop and buy 1)
+* Bank at Draynor and Deposit all
+}}

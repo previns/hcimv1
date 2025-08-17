@@ -1,31 +1,47 @@
 #!/usr/bin/env python3
 """
 run_all.py
-One-shot runner for the whole pipeline using files placed in the same folder.
+Convenience script to run the full quest helper conversion pipeline.
 """
-import subprocess, sys, os, json, shutil
-from pathlib import Path
+import subprocess
+import os
 
-base = Path(__file__).parent
-wiki = base/"wiki_cleaned.txt"
-world = base/"worldpoints.json"
-items = base/"OSRS ID List.json"
+def run_command(command):
+    print(f"Running: {' '.join(command)}")
+    try:
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        print(result.stdout, end='')
+        if result.stderr:
+            print(result.stderr, end='')
+    except subprocess.CalledProcessError as e:
+        print(f"Error: {e}", file=sys.stderr)
+        print(e.stderr, file=sys.stderr)
+        raise
 
-parsed = base/"steps_parsed.json"
-enriched = base/"steps_enriched.json"
-java_out = base/"QuestFromWiki.java"
+def main():
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    parse_steps = [
+        "python", os.path.join(base_dir, "parse_steps.py"),
+        "--in", os.path.join(base_dir, "wiki_cleaned.txt"),
+        "--out", os.path.join(base_dir, "steps_parsed.json")
+    ]
+    resolve_entities = [
+        "python", os.path.join(base_dir, "resolve_entities.py"),
+        "--steps", os.path.join(base_dir, "steps_parsed.json"),
+        "--world", os.path.join(base_dir, "worldpoints.json"),
+        "--items", os.path.join(base_dir, "OSRS ID List.json"),
+        "--out", os.path.join(base_dir, "steps_enriched.json")
+    ]
+    generate_java = [
+        "python", os.path.join(base_dir, "generate_java.py"),
+        "--in", os.path.join(base_dir, "steps_enriched.json"),
+        "--classname", "QuestFromWiki",
+        "--out", os.path.join(base_dir, "QuestFromWiki.java")
+    ]
 
-cmds = [
-    [sys.executable, str(base/"parse_steps.py"), "--in", str(wiki), "--out", str(parsed)],
-    [sys.executable, str(base/"resolve_entities.py"), "--steps", str(parsed), "--world", str(world), "--items", str(items), "--out", str(enriched)],
-    [sys.executable, str(base/"generate_java.py"), "--in", str(enriched), "--classname", "QuestFromWiki", "--out", str(java_out)],
-]
+    run_command(parse_steps)
+    run_command(resolve_entities)
+    run_command(generate_java)
 
-for c in cmds:
-    print("Running:", " ".join(c))
-    subprocess.check_call(c)
-
-print("Done. Outputs:")
-print("  -", parsed)
-print("  -", enriched)
-print("  -", java_out)
+if __name__ == "__main__":
+    main()

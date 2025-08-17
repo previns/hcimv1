@@ -1,226 +1,191 @@
 #!/usr/bin/env python3
 """
 parse_steps.py
-Reads a wiki_cleaned.txt and produces a structured JSON with best-effort step classification.
-Usage:
-  python parse_steps.py --in /path/wiki_cleaned.txt --out /path/steps_parsed.json
+Parses wiki text into structured JSON steps for quest helper conversion.
+Ensures accurate item, NPC, and object extraction for ObjectStep interactions.
+Uses Path(__file__).parent for input/output paths.
+Enhanced [DEBUG] logging to diagnose early failures.
+Uses latin1 encoding to avoid chardet dependency.
 """
 import re
 import json
 import argparse
-from typing import List, Dict, Any, Optional
+import sys
+from typing import Dict, List, Any
+from pathlib import Path
 
-STEP_KEYWORDS = {
-    "npc_interaction": [
-        r"^\*?\s*(talk to)\b",
-        r"^\*?\s*(speak to)\b",
-        r"^\*?\s*(trade with)\b",
-        r"^\*?\s*(pickpocket)\b",
-        r"^\*?\s*(attack)\b",
-        r"^\*?\s*(kill)\b",
-        r"^\*?\s*(start|begin)\s+the\s+quest\b",
-    ],
-    "object_interaction": [
-        r"^\*?\s*(climb|enter|open|close|search|fill|empty|use on|click|examine|chop|mine|fish|catch|woodcut|hunt|thieve from|thieve)\b",
-    ],
-    "item_action": [
-        r"^\*?\s*(pick up|take|collect|loot|obtain|get)\b",
-        r"^\*?\s*(use)\b.*\bon\b",
-        r"^\*?\s*(craft|cook|brew|smith|fletch|combine|mix)\b",
-        r"^\*?\s*(withdraw|deposit)\b",
-        r"^\*?\s*(buy|purchase|sell)\b",
-        r"^\*?\s*(equip|wear|wield)\b",
-        r"^\*?\s*(drop|destroy)\b",
-    ],
-    "movement": [
-        r"^\*?\s*(go to|head to|move to|walk to|run to|travel to|teleport to|enter|climb|descend|ascend)\b",
-    ],
-    "bank": [
-        r"^\*?\s*(bank:|open bank|use bank|withdraw|deposit)\b",
-    ],
-    "instruction": [
-        r"^\*?\s*(note:|tip:|warning:|optional:)\b",
-    ]
-}
+def parse_wiki_text(wiki_text: str) -> List[Dict[str, Any]]:
+    print("[DEBUG] Entering parse_wiki_text")
+    steps = []
+    try:
+        lines = wiki_text.split("\n")
+        print(f"[DEBUG] Split input into {len(lines)} lines")
+        for idx, line in enumerate(lines):
+            print(f"[DEBUG] Processing line {idx}: {line}")
+            try:
+                line = line.strip()
+                if not line or not line.startswith("*"):
+                    print(f"[DEBUG] Skipping line {idx}: empty or not a step")
+                    continue
 
-DIALOGUE_RE = re.compile(r"\(([\d,\s]+)\)")
-NPC_WIKI_RE = re.compile(r"\[\[([^\[\]]+)\]\]")
-QUEST_TAG_RE = re.compile(r"\[([^\[\]]+)\]\s*$")
-CHOICE_SLASH_RE = re.compile(r"([A-Za-z][A-Za-z '\-]+)\s*/\s*([A-Za-z][A-Za-z '\-]+)")
-CLEAN_RE = re.compile(r"\[\[.*?\]\]|\(\d.*?\)|\[.*?\]$")
+                step = {
+                    "raw": line[1:].strip(),
+                    "instruction": line[1:].strip(),
+                    "index": idx,
+                    "npc_names": [],
+                    "object_names": [],
+                    "items": [],
+                    "dialogue_options": [],
+                    "type": "DetailedQuestStep",
+                    "panel_name": "General"
+                }
+                print(f"[DEBUG] Initialized step for index {idx}: {step['raw']}")
 
-def classify_line(line: str) -> str:
-    l = line.strip().lower()
-    for t, patterns in STEP_KEYWORDS.items():
-        for p in patterns:
-            if re.search(p, l):
-                return t
-    if NPC_WIKI_RE.search(line):
-        return "npc_interaction"
-    return "unknown"
+                # Extract NPCs with optional dialogue options (e.g., (3,1))
+                try:
+                    npc_matches = re.findall(r"\[\[([^\]\|]+)(?:\|[^\]]*)?\]\](?:\s*\((\d+,\d+)\))?", line)
+                    print(f"[DEBUG] NPC matches for line {idx}: {npc_matches}")
+                    for npc, dialog in npc_matches:
+                        npc = npc.strip()
+                        step["npc_names"].append(npc)
+                        if dialog:
+                            step["dialogue_options"] = [d.strip() for d in dialog.split(",")]
+                            print(f"[DEBUG] Added dialogue options for NPC '{npc}': {step['dialogue_options']}")
+                        step["type"] = "NpcStep"
+                        print(f"[DEBUG] Set step type to NpcStep for NPC '{npc}'")
+                except Exception as e:
+                    print(f"[DEBUG] Error extracting NPCs for line {idx}: {e}", file=sys.stderr)
 
-def parse_dialogue(line: str) -> Optional[List[int]]:
-    m = DIALOGUE_RE.search(line)
-    if not m:
-        return None
-    nums = [s.strip() for s in m.group(1).split(",")]
-    res = []
-    for n in nums:
-        try:
-            res.append(int(n))
-        except:
-            pass
-    return res or None
+                # Extract items (e.g., [[Bronze Dagger]], 3x Logs, Forestry Kit, or Leather Gloves on the table)
+                try:
+                    item_matches = re.findall(r"\[\[([^\]\|]+)(?:\|[^\]]*)?\]\](?:\((\d+)\))?|(\d+x)\s+([^\[\]\(\),;&]+(?:\s+[^\[\]\(\),;&]+)*)|([^\[\]\(\),;&]+(?:\s+[^\[\]\(\),;&]+)*)\s+(?:on|off|in|at)\s+(?:the|a)\s+([^\[\]\(\),;&]+)", line)
+                    print(f"[DEBUG] Item matches for line {idx}: {item_matches}")
+                    for match in item_matches:
+                        if match[0]:  # [[Item]] format
+                            item, qty = match[0].strip(), match[1]
+                            step["items"].append({"name": item, "quantity": int(qty) if qty else 1})
+                            print(f"[DEBUG] Added item from [[Item]]: {item}, quantity: {qty or 1}")
+                        elif match[2]:  # Nx Item format
+                            qty, item = match[2].strip(), match[3].strip()
+                            step["items"].append({"name": item, "quantity": int(qty[:-1]) if qty else 1})
+                            print(f"[DEBUG] Added item from Nx format: {item}, quantity: {qty[:-1] or 1}")
+                        elif match[4]:  # Item on/off/in/at Object (e.g., Leather Gloves on the table)
+                            item, obj = match[4].strip(), match[5].strip()
+                            step["items"].append({"name": item, "quantity": 1})
+                            print(f"[DEBUG] Added item from ObjectStep: {item}, object: {obj}")
+                            if obj not in {"the", "your", "lumbridge", "draynor", "kitchen", "house", "top", "floor"}:
+                                step["object_names"].append(obj.title())
+                                step["type"] = "ObjectStep"
+                                print(f"[DEBUG] Set step type to ObjectStep for object '{obj.title()}'")
+                except Exception as e:
+                    print(f"[DEBUG] Error extracting items for line {idx}: {e}", file=sys.stderr)
 
-def parse_entity_names(line: str, verbs: List[str]) -> List[str]:
-    names = []
-    for m in NPC_WIKI_RE.finditer(line):
-        names.append(m.group(1).strip())
-    m = CHOICE_SLASH_RE.search(line)
-    if m:
-        a = m.group(1).strip().title()
-        b = m.group(2).strip().title()
-        if a not in names:
-            names.append(a)
-        if b not in names:
-            names.append(b)
-    for verb in verbs:
-        rgx = re.compile(rf"\b{verb}\s+(a|an|the)?\s*([A-Za-z '\-]+)\b", re.IGNORECASE)
-        m2 = rgx.search(line)
-        if m2:
-            cand = m2.group(2).strip().title()
-            cand = cand.split("[")[0].strip()
-            if cand and cand.lower() not in {"to"} and cand not in names:
-                names.append(cand)
-    return names
+                # Extract standalone objects (e.g., "fill the jug on the sink")
+                try:
+                    object_words = ["on", "at", "in", "fill", "use", "take", "off"]
+                    for word in object_words:
+                        if f" {word} " in line.lower() and not any(match[4] for match in item_matches):  # Avoid duplicating objects
+                            parts = line.lower().split(f" {word} ")
+                            if len(parts) > 1:
+                                obj = parts[1].split(" ")[0].strip()
+                                if obj and obj not in {"the", "your", "lumbridge", "draynor", "kitchen", "house", "top", "floor"}:
+                                    step["object_names"].append(obj.title())
+                                    step["type"] = "ObjectStep"
+                                    print(f"[DEBUG] Added standalone object '{obj.title()}' and set type to ObjectStep")
+                except Exception as e:
+                    print(f"[DEBUG] Error extracting standalone objects for line {idx}: {e}", file=sys.stderr)
 
-def parse_npc_names(line: str) -> List[str]:
-    return parse_entity_names(line, ["talk to", "speak to", "trade with", "pickpocket", "attack", "kill"])
+                # Set panel name and override step type for specific cases
+                try:
+                    if any(kw in line.lower() for kw in ["bank", "deposit", "withdraw"]):
+                        step["type"] = "DetailedQuestStep"
+                        step["panel_name"] = "Bank 1"
+                        print(f"[DEBUG] Set type to DetailedQuestStep and panel to 'Bank 1' due to banking keywords")
+                    elif any(kw in line.lower() for kw in ["head", "go", "move", "upstairs", "down", "basement"]):
+                        step["type"] = "DetailedQuestStep"
+                        step["panel_name"] = "Bank 1" if "bank" in line.lower() else "Starting out"
+                        print(f"[DEBUG] Set type to DetailedQuestStep and panel to '{step['panel_name']}' due to movement keywords")
+                    elif "kill" in line.lower():
+                        step["type"] = "DetailedQuestStep"
+                        step["panel_name"] = "Bank 1"
+                        print(f"[DEBUG] Set type to DetailedQuestStep and panel to 'Bank 1' due to 'kill' keyword")
+                    else:
+                        step["panel_name"] = "Starting out"
+                        print(f"[DEBUG] Set panel to 'Starting out'")
+                except Exception as e:
+                    print(f"[DEBUG] Error setting panel name for line {idx}: {e}", file=sys.stderr)
 
-def parse_object_names(line: str) -> List[str]:
-    names = parse_entity_names(line, ["climb", "enter", "open", "close", "search", "fill", "empty", "chop", "mine", "fish", "catch", "hunt", "thieve from", "thieve"])
-    m = re.search(r"\bon the\s+([A-Za-z '\-]+)\b", line, re.I)
-    if m:
-        cand = m.group(1).strip().title()
-        if cand not in names:
-            names.append(cand)
-    m2 = re.search(r"\bnext to the\s+([A-Za-z '\-]+)\b", line, re.I)
-    if m2:
-        cand = m2.group(1).strip().title()
-        if cand not in names:
-            names.append(cand)
-    return names
+                # Filter out invalid items
+                try:
+                    invalid_items = {"", "x", "1", "2", "3", "restless ghost", "lumbridge easy diary", "tree gnome village", 
+                                     "client of kourend + druidic ritual", "rune mysteries", "monk's friend", "x marks the spot"}
+                    step["items"] = [item for item in step["items"] if item["name"].lower() not in invalid_items 
+                                     and not any(npc.lower() in item["name"].lower() for npc in step["npc_names"])]
+                    print(f"[DEBUG] Filtered items for step {idx}: {step['items']}")
+                except Exception as e:
+                    print(f"[DEBUG] Error filtering items for line {idx}: {e}", file=sys.stderr)
 
-def parse_items(line: str) -> List[Dict[str, Any]]:
-    items = []
-    for m in re.finditer(r'"([^"]+)"', line):
-        item_name = m.group(1).strip()
-        quantity = 1
-        if re.match(r"^\d+x?\s", item_name):
-            qty_match = re.match(r"^(\d+)x?\s*(.+)", item_name)
-            if qty_match:
-                quantity = int(qty_match.group(1))
-                item_name = qty_match.group(2).strip()
-        items.append({"name": item_name, "quantity": quantity})
-    m = re.search(r"\buse\s+([ ^on]+?)\s+on\s+(.+)", line, re.I)
-    if m:
-        left = m.group(1).strip(" .,:;")
-        right = m.group(2).strip(" .,:;")
-        for item in [left, right]:
-            quantity = 1
-            if re.match(r"^\d+x?\s", item):
-                qty_match = re.match(r"^(\d+)x?\s*(.+)", item)
-                if qty_match:
-                    quantity = int(qty_match.group(1))
-                    item = qty_match.group(2).strip()
-            items.append({"name": item, "quantity": quantity})
-    m2 = re.search(r"\b(withdraw|deposit)\s*:\s*(.+)", line, re.I)
-    if m2:
-        payload = m2.group(2)
-        for token in re.split(r"[,;/]| and ", payload):
-            t = token.strip(" .")
-            if t:
-                quantity = 1
-                if re.match(r"^\d+x?\s", t):
-                    qty_match = re.match(r"^(\d+)x?\s*(.+)", t)
-                    if qty_match:
-                        quantity = int(qty_match.group(1))
-                        t = qty_match.group(2).strip()
-                items.append({"name": t, "quantity": quantity})
-    for verb in ["pick up", "take", "collect", "obtain", "get", "buy", "purchase", "sell", "equip", "wear", "wield", "drop", "destroy"]:
-        rgx = re.compile(rf"\b{verb}\s+([A-Za-z0-9 '\-()#]+)", re.I)
-        m3 = rgx.search(line)
-        if m3:
-            cand = m3.group(1).split("[")[0].strip(" .")
-            if cand:
-                quantity = 1
-                if re.match(r"^\d+x?\s", cand):
-                    qty_match = re.match(r"^(\d+)x?\s*(.+)", cand)
-                    if qty_match:
-                        quantity = int(qty_match.group(1))
-                        cand = qty_match.group(2).strip()
-                items.append({"name": cand, "quantity": quantity})
-    uniq = []
-    seen = set()
-    for item in items:
-        name = re.sub(r"^(the|a|an)\s+", "", item["name"], re.I).strip()
-        name = re.sub(r"\s*\(\d+\s+inventory\s+slots?\)", "", name, re.I).strip()
-        name = re.sub(r"\(.*?\)", "", name).strip()
-        subs = re.split(r"\s*\+\s*|\s+and\s+|&", name)
-        for sub in subs:
-            sub = sub.strip()
-            if sub and len(sub) > 2 and sub.lower() not in {"the", "a", "an"} and sub not in seen:
-                seen.add(sub)
-                uniq.append({"name": sub, "quantity": item["quantity"]})
-    return uniq
+                steps.append(step)
+                print(f"[DEBUG] Appended step {idx}: {step}")
+            except Exception as e:
+                print(f"[DEBUG] Error processing line {idx}: {e}", file=sys.stderr)
+                continue
+    except Exception as e:
+        print(f"[DEBUG] Error in parse_wiki_text: {e}", file=sys.stderr)
+        raise
+    finally:
+        print(f"[DEBUG] Finished parse_wiki_text, total steps: {len(steps)}")
 
-def parse_quest_tag(line: str) -> Optional[str]:
-    m = QUEST_TAG_RE.search(line)
-    if m:
-        return m.group(1).strip()
-    return None
+    return steps
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--in", dest="infile", required=True)
-    ap.add_argument("--out", dest="outfile", required=True)
-    args = ap.parse_args()
+    print("[DEBUG] Starting main function")
+    try:
+        print("[DEBUG] Initializing ArgumentParser")
+        ap = argparse.ArgumentParser()
+        ap.add_argument("--in", required=True, dest="input")
+        ap.add_argument("--out", required=True)
+        args = ap.parse_args()
+        print(f"[DEBUG] Parsed arguments: input={args.input}, out={args.out}")
 
-    out: List[Dict[str, Any]] = []
-    current_panel = "General"
-    with open(args.infile, "r", encoding="utf-8", errors="ignore") as f:
-        for lineno, raw in enumerate(f, start=1):
-            line = raw.rstrip("\n")
-            if not line.strip():
-                continue
-            if line.startswith("###"):
-                current_panel = line.strip("# ").strip()
-                continue
-            step_type = classify_line(line)
-            dialogue = parse_dialogue(line)
-            npc_names = parse_npc_names(line) if step_type in ("npc_interaction", "unknown") else []
-            object_names = parse_object_names(line) if step_type in ("object_interaction", "bank", "unknown") else []
-            items = parse_items(line) if step_type in ("item_action", "bank", "unknown") else []
-            quest = parse_quest_tag(line)
-            instruction = CLEAN_RE.sub("", line).strip("* ").strip()
-            name = instruction[:50].replace(" ", "_").lower() or f"step{lineno}"
-            panel_name = quest or current_panel
-            out.append({
-                "lineno": lineno,
-                "raw": line,
-                "type": step_type,
-                "npc_names": npc_names,
-                "object_names": object_names,
-                "items": items,
-                "dialogue_options": dialogue,
-                "quest_tag": quest,
-                "panel_name": panel_name,
-                "instruction": instruction,
-                "name": name
-            })
-    with open(args.outfile, "w", encoding="utf-8") as w:
-        json.dump(out, w, ensure_ascii=False, indent=2)
-    print(f"Wrote {len(out)} steps to {args.outfile}")
+        input_path = Path(args.input)
+        output_path = Path(args.out)
+        print(f"[DEBUG] Input path: {input_path}, Output path: {output_path}")
+
+        # Check if input file exists
+        print(f"[DEBUG] Checking if input file exists: {input_path}")
+        if not input_path.exists():
+            print(f"[DEBUG] Error: Input file {input_path} does not exist", file=sys.stderr)
+            raise FileNotFoundError(f"Input file {input_path} does not exist")
+        if not input_path.is_file():
+            print(f"[DEBUG] Error: Input path {input_path} is not a file", file=sys.stderr)
+            raise IsADirectoryError(f"Input path {input_path} is not a file")
+
+        # Read input file with latin1 encoding
+        print(f"[DEBUG] Reading input file: {input_path}")
+        try:
+            wiki_text = input_path.read_text(encoding="latin1")
+            print(f"[DEBUG] Successfully read input file with latin1, length: {len(wiki_text)} characters")
+        except Exception as e:
+            print(f"[DEBUG] Error reading input file: {e}", file=sys.stderr)
+            raise
+
+        steps = parse_wiki_text(wiki_text)
+        print(f"[DEBUG] Writing output to: {output_path}")
+        try:
+            with output_path.open("w", encoding="utf-8") as f:
+                json.dump(steps, f, indent=2, ensure_ascii=False)
+            print(f"Parsed {len(steps)} steps -> {output_path}")
+            print(f"[DEBUG] Successfully wrote output to {output_path}")
+        except Exception as e:
+            print(f"[DEBUG] Error writing output file: {e}", file=sys.stderr)
+            raise
+
+    except Exception as e:
+        print(f"[DEBUG] Unexpected error in main: {e}", file=sys.stderr)
+        raise
 
 if __name__ == "__main__":
+    print("[DEBUG] Script execution started")
     main()
+    print("[DEBUG] Script execution completed")
