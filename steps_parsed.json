@@ -69,8 +69,14 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Spade Chisel",
-      "Bronze Dagger"
+      {
+        "name": "Spade Chisel",
+        "quantity": 1
+      },
+      {
+        "name": "Bronze Dagger",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -136,7 +142,10 @@
       "Top Floor"
     ],
     "items": [
-      "4x logs on the top floor"
+      {
+        "name": "logs on the top floor",
+        "quantity": 4
+      }
     ],
     "dialogue_options": null,
     "quest_tag": "Tree Gnome Village",
@@ -190,14 +199,38 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Coins",
-      "Air Runes",
-      "Mind Runes",
-      "Bread",
-      "Spade",
-      "Tinderbox",
-      "Air Talisman",
-      "Treasure Scroll (8 Inventory slots)"
+      {
+        "name": "Coins",
+        "quantity": 1
+      },
+      {
+        "name": "Air Runes",
+        "quantity": 1
+      },
+      {
+        "name": "Mind Runes",
+        "quantity": 1
+      },
+      {
+        "name": "Bread",
+        "quantity": 1
+      },
+      {
+        "name": "Spade",
+        "quantity": 1
+      },
+      {
+        "name": "Tinderbox",
+        "quantity": 1
+      },
+      {
+        "name": "Air Talisman",
+        "quantity": 1
+      },
+      {
+        "name": "Treasure Scroll",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -225,7 +258,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Empty Jug"
+      {
+        "name": "Empty Jug",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -315,7 +351,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Leather Gloves on the table inside his house"
+      {
+        "name": "Leather Gloves on the table inside his house",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -343,7 +382,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Leather Boots off the table"
+      {
+        "name": "Leather Boots off the table",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -358,7 +400,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "3x Logs next to the stairs"
+      {
+        "name": "Logs next to the stairs",
+        "quantity": 3
+      }
     ],
     "dialogue_options": null,
     "quest_tag": "Tree Gnome Village",
@@ -405,7 +450,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "3x Logs"
+      {
+        "name": "Logs",
+        "quantity": 3
+      }
     ],
     "dialogue_options": null,
     "quest_tag": "Tree Gnome Village",
@@ -448,10 +496,22 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Coins",
-      "Spade",
-      "Feather",
-      "Mysterious Orb (4 Inventory Slots)"
+      {
+        "name": "Coins",
+        "quantity": 1
+      },
+      {
+        "name": "Spade",
+        "quantity": 1
+      },
+      {
+        "name": "Feather",
+        "quantity": 1
+      },
+      {
+        "name": "Mysterious Orb",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -466,7 +526,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Cheese from"
+      {
+        "name": "Cheese from",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": "Witch's House",
@@ -511,7 +574,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "4x Garlic from the cupboard"
+      {
+        "name": "Garlic from the cupboard",
+        "quantity": 4
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -526,7 +592,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "multiple garlic by spamclicking the cupboard"
+      {
+        "name": "multiple garlic by spamclicking the cupboard",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": "Fishing Contest",
@@ -625,8 +694,14 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "this later as you can't bank it",
-      "lamp"
+      {
+        "name": "this later as you can't bank it",
+        "quantity": 1
+      },
+      {
+        "name": "lamp",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -672,7 +747,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Minecart to Shayzien East"
+      {
+        "name": "Minecart to Shayzien East",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -702,7 +780,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Beer"
+      {
+        "name": "Beer",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -748,7 +829,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Tinderbox"
+      {
+        "name": "Tinderbox",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -758,33 +842,37 @@
   },
   {
     "lineno": 54,
-    "raw": "* Take Wizard Hat & Orange Dye [Shadow of the Storm, Goblin Diplomacy]",
+    "raw": "* Take Wizard Hat & Orange Dye [Shadow of the Storm, Goblin Diplomacy] from house to the west (Shayzien Styles)",
     "type": "item_action",
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Wizard Hat"
+      {
+        "name": "Wizard Hat",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
-    "quest_tag": "Shadow of the Storm, Goblin Diplomacy",
-    "panel_name": "Shadow of the Storm, Goblin Diplomacy",
-    "instruction": "Take Wizard Hat & Orange Dye",
-    "name": "take_wizard_hat_&_orange_dye"
+    "quest_tag": null,
+    "panel_name": "Bank 2",
+    "instruction": "Take Wizard Hat & Orange Dye [Shadow of the Storm, Goblin Diplomacy] from house to the west (Shayzien Styles)",
+    "name": "take_wizard_hat_&_orange_dye_[shadow_of_the_storm,"
   },
   {
     "lineno": 55,
-    "raw": "* Buy Chefs Hat [Cooking Guild]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Chefs Hat"
+    "raw": "* Trade [[Robyn]] and buy a [[Chef's Hat]]  [Cook's guild]",
+    "type": "npc_interaction",
+    "npc_names": [
+      "Robyn",
+      "Chef's Hat"
     ],
+    "object_names": [],
+    "items": [],
     "dialogue_options": null,
-    "quest_tag": "Cooking Guild",
-    "panel_name": "Cooking Guild",
-    "instruction": "Buy Chefs Hat",
-    "name": "buy_chefs_hat"
+    "quest_tag": "Cook's guild",
+    "panel_name": "Cook's guild",
+    "instruction": "Trade  and buy a",
+    "name": "trade__and_buy_a"
   },
   {
     "lineno": 56,
@@ -869,7 +957,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "3 or more damage"
+      {
+        "name": "or more damage",
+        "quantity": 3
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -912,7 +1003,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "3x Beer inside the Longhall"
+      {
+        "name": "Beer inside the Longhall",
+        "quantity": 3
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -927,7 +1021,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Cooked Meat"
+      {
+        "name": "Cooked Meat",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": "Mournings End Pt 2",
@@ -959,7 +1056,10 @@
     "npc_names": [],
     "object_names": [],
     "items": [
-      "Doogle Leaf south of Gertrude"
+      {
+        "name": "Doogle Leaf south of Gertrude",
+        "quantity": 1
+      }
     ],
     "dialogue_options": null,
     "quest_tag": null,
@@ -979,1906 +1079,5 @@
     "panel_name": "Bank 2",
     "instruction": "Bank at Varrock West Bank and deposit all",
     "name": "bank_at_varrock_west_bank_and_deposit_all"
-  },
-  {
-    "lineno": 70,
-    "raw": "* Withdraw: Coins, Bones, Beer (3 Inventory Spaces)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Coins",
-      "Bones",
-      "Beer (3 Inventory Spaces)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Withdraw: Coins, Bones, Beer",
-    "name": "withdraw:_coins,_bones,_beer"
-  },
-  {
-    "lineno": 71,
-    "raw": "* Use the bones on the [[Stray Dog]] whenever you find him",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Use the bones on the  whenever you find him",
-    "name": "use_the_bones_on_the__whenever_you_find_him"
-  },
-  {
-    "lineno": 72,
-    "raw": "* Head East and buy an Air Staff from [[Zaff]]. Equip it.",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Zaff"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Head East and buy an Air Staff from . Equip it.",
-    "name": "head_east_and_buy_an_air_staff_from_._equip_it."
-  },
-  {
-    "lineno": 73,
-    "raw": "* Head South & Talk to [[Aris]] and start Demon Slayer (1,2,3,4).",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Aris"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      2,
-      3,
-      4
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Head South & Talk to  and start Demon Slayer .",
-    "name": "head_south_&_talk_to__and_start_demon_slayer_."
-  },
-  {
-    "lineno": 74,
-    "raw": "* Head South & Trade [[Thessalia]] [Varrock Easy Diary]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Thessalia"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Varrock Easy Diary",
-    "panel_name": "Varrock Easy Diary",
-    "instruction": "Head South & Trade",
-    "name": "head_south_&_trade"
-  },
-  {
-    "lineno": 75,
-    "raw": "* Buy Pink Skirt, Brown Apron & Silk. Wear Brown Apron & Pink Skirt in honour of Faux",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Pink Skirt",
-      "Brown Apron"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Buy Pink Skirt, Brown Apron & Silk. Wear Brown Apron & Pink Skirt in honour of Faux",
-    "name": "buy_pink_skirt,_brown_apron_&_silk._wear_brown_apr"
-  },
-  {
-    "lineno": 76,
-    "raw": "* Head South to the Sword Shop and go up the ladder. Loot the lit candle.",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Head South to the Sword Shop and go up the ladder. Loot the lit candle.",
-    "name": "head_south_to_the_sword_shop_and_go_up_the_ladder."
-  },
-  {
-    "lineno": 77,
-    "raw": "* Head East and talk to [[Dr Harlow]] (2, talk again)[Vampyre Slayer]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Dr Harlow"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Vampyre Slayer",
-    "panel_name": "Vampyre Slayer",
-    "instruction": "Head East and talk to",
-    "name": "head_east_and_talk_to"
-  },
-  {
-    "lineno": 78,
-    "raw": "* Head North",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Head North",
-    "name": "head_north"
-  },
-  {
-    "lineno": 79,
-    "raw": "* Talk to [[Romeo]] (3,1) [Romeo & Juliet]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Romeo"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      3,
-      1
-    ],
-    "quest_tag": "Romeo & Juliet",
-    "panel_name": "Romeo & Juliet",
-    "instruction": "Talk to",
-    "name": "talk_to"
-  },
-  {
-    "lineno": 80,
-    "raw": "* Buy a Newspaper from [[Benny]](1,1)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Newspaper from"
-    ],
-    "dialogue_options": [
-      1,
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Buy a Newspaper from",
-    "name": "buy_a_newspaper_from"
-  },
-  {
-    "lineno": 81,
-    "raw": "* Talk to [[Shilop]] to continue Gertrudes Cat (2,2)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Shilop"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      2,
-      2
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Talk to  to continue Gertrudes Cat",
-    "name": "talk_to__to_continue_gertrudes_cat"
-  },
-  {
-    "lineno": 82,
-    "raw": "* Talk to [[Noah]] (1,3) [Children of the Sun]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Noah"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      3
-    ],
-    "quest_tag": "Children of the Sun",
-    "panel_name": "Children of the Sun",
-    "instruction": "Talk to",
-    "name": "talk_to"
-  },
-  {
-    "lineno": 83,
-    "raw": "* Complete Children of the Sun",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Complete Children of the Sun",
-    "name": "complete_children_of_the_sun"
-  },
-  {
-    "lineno": 84,
-    "raw": "* Talk to [[Sir Prysin]] (3,1,2,2,1,1) [Demon Slayer]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Sir Prysin"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      3,
-      1,
-      2,
-      2,
-      1,
-      1
-    ],
-    "quest_tag": "Demon Slayer",
-    "panel_name": "Demon Slayer",
-    "instruction": "Talk to",
-    "name": "talk_to"
-  },
-  {
-    "lineno": 85,
-    "raw": "* Head North and go up 2x Stairs and talk to [[Captain Rovin]] (3,1,2,2,3,1) [Demon Slayer]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Captain Rovin"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      3,
-      1,
-      2,
-      2,
-      3,
-      1
-    ],
-    "quest_tag": "Demon Slayer",
-    "panel_name": "Demon Slayer",
-    "instruction": "Head North and go up 2x Stairs and talk to",
-    "name": "head_north_and_go_up_2x_stairs_and_talk_to"
-  },
-  {
-    "lineno": 86,
-    "raw": "* Return down the stairs and talk to [[Reldo]] and start Shield of Arrav (1,1).",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Reldo"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Return down the stairs and talk to  and start Shield of Arrav .",
-    "name": "return_down_the_stairs_and_talk_to__and_start_shie"
-  },
-  {
-    "lineno": 87,
-    "raw": "* Search for book and talk to [[Reldo]] again (1)",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Reldo",
-      "For Book And Talk To"
-    ],
-    "items": [],
-    "dialogue_options": [
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Search for book and talk to  again",
-    "name": "search_for_book_and_talk_to__again"
-  },
-  {
-    "lineno": 88,
-    "raw": "* Head East and up the stairs in the Kitchen.",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Head East and up the stairs in the Kitchen.",
-    "name": "head_east_and_up_the_stairs_in_the_kitchen."
-  },
-  {
-    "lineno": 89,
-    "raw": "* Collect both buckets and fill one up downstairs. Use Bucket of Water on drain outside then refill it.",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "both buckets",
-      "fill one up downstairs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Collect both buckets and fill one up downstairs. Use Bucket of Water on drain outside then refill it.",
-    "name": "collect_both_buckets_and_fill_one_up_downstairs._u"
-  },
-  {
-    "lineno": 90,
-    "raw": "* Take the Pie Dish [Knight's Sword]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Pie Dish"
-    ],
-    "dialogue_options": null,
-    "quest_tag": "Knight's Sword",
-    "panel_name": "Knight's Sword",
-    "instruction": "Take the Pie Dish",
-    "name": "take_the_pie_dish"
-  },
-  {
-    "lineno": 91,
-    "raw": "* Head to [[King Roald]] and start Priest in Peril (1,1,3)",
-    "type": "movement",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      1,
-      3
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Head to  and start Priest in Peril",
-    "name": "head_to__and_start_priest_in_peril"
-  },
-  {
-    "lineno": 92,
-    "raw": "* Talk to [[Marlo]] and start Daddy's Home (in a house the east of the castle) (2,3,3)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Marlo"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      2,
-      3,
-      3
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Talk to  and start Daddy's Home (in a house the east of the castle)",
-    "name": "talk_to__and_start_daddy's_home_(in_a_house_the_ea"
-  },
-  {
-    "lineno": 93,
-    "raw": "* Pick up the Saw",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Saw"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Pick up the Saw",
-    "name": "pick_up_the_saw"
-  },
-  {
-    "lineno": 94,
-    "raw": "* Enter Varrock Sewer and take the North-West path to collect the Demon Slayer Key",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Varrock Sewer And Take The North-West Path To Collect The Demon Slayer Key"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Enter Varrock Sewer and take the North-West path to collect the Demon Slayer Key",
-    "name": "enter_varrock_sewer_and_take_the_north-west_path_t"
-  },
-  {
-    "lineno": 95,
-    "raw": "* Enter Varrock Museum and head downstairs and talk to [[Orlando Smith]] (1) and complete the [[Natural History Quiz]] for 9 slayer and hunter and 28 kudos.",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Orlando Smith",
-      "Natural History Quiz",
-      "Varrock Museum And Head Downstairs And Talk To"
-    ],
-    "items": [],
-    "dialogue_options": [
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Enter Varrock Museum and head downstairs and talk to   and complete the  for 9 slayer and hunter and 28 kudos.",
-    "name": "enter_varrock_museum_and_head_downstairs_and_talk_"
-  },
-  {
-    "lineno": 96,
-    "raw": "* Bank at Varrock East bank and Deposit all",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 3",
-    "instruction": "Bank at Varrock East bank and Deposit all",
-    "name": "bank_at_varrock_east_bank_and_deposit_all"
-  },
-  {
-    "lineno": 98,
-    "raw": "* Withdraw: Coins, Saw, Hammer, Knife, Bronze Axe, Research Package, Tinderbox (7 Inventory Slots)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Coins",
-      "Saw",
-      "Hammer",
-      "Knife",
-      "Bronze Axe",
-      "Research Package",
-      "Tinderbox (7 Inventory Slots)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Withdraw: Coins, Saw, Hammer, Knife, Bronze Axe, Research Package, Tinderbox",
-    "name": "withdraw:_coins,_saw,_hammer,_knife,_bronze_axe,_r"
-  },
-  {
-    "lineno": 99,
-    "raw": "* Talk to [[Aubury]] to continue Rune Mysteries (2)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Aubury"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      2
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Talk to  to continue Rune Mysteries",
-    "name": "talk_to__to_continue_rune_mysteries"
-  },
-  {
-    "lineno": 100,
-    "raw": "* Light both logs in the house right next to the rune shop.",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [
-      "Rune Shop"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Light both logs in the house right next to the rune shop.",
-    "name": "light_both_logs_in_the_house_right_next_to_the_run"
-  },
-  {
-    "lineno": 101,
-    "raw": "* Destroy all the furniture in the house",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "all the furniture in the house"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Destroy all the furniture in the house",
-    "name": "destroy_all_the_furniture_in_the_house"
-  },
-  {
-    "lineno": 102,
-    "raw": "* Talk to [[Old Man Yarlo]] to continue Daddy's Home (2)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Old Man Yarlo"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      2
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Talk to  to continue Daddy's Home",
-    "name": "talk_to__to_continue_daddy's_home"
-  },
-  {
-    "lineno": 103,
-    "raw": "* Take 2x Logs & 2x ashes after cutscene",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "2x Logs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Take 2x Logs & 2x ashes after cutscene",
-    "name": "take_2x_logs_&_2x_ashes_after_cutscene"
-  },
-  {
-    "lineno": 104,
-    "raw": "* Search crates for 3x Waxwood log",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Crates For"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Search crates for 3x Waxwood log",
-    "name": "search_crates_for_3x_waxwood_log"
-  },
-  {
-    "lineno": 105,
-    "raw": "* Bank the ashes",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Bank the ashes",
-    "name": "bank_the_ashes"
-  },
-  {
-    "lineno": 106,
-    "raw": "* Head North-East to the Lumberyard",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Head North-East to the Lumberyard",
-    "name": "head_north-east_to_the_lumberyard"
-  },
-  {
-    "lineno": 107,
-    "raw": "* Cut the Dying tree [Varrock Easy Diary]",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Varrock Easy Diary",
-    "panel_name": "Varrock Easy Diary",
-    "instruction": "Cut the Dying tree",
-    "name": "cut_the_dying_tree"
-  },
-  {
-    "lineno": 108,
-    "raw": "* Collect the Logs & fletch 2,100 Arrowshafts (hop between 2 worlds)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Logs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Collect the Logs & fletch 2,100 Arrowshafts (hop between 2 worlds)",
-    "name": "collect_the_logs_&_fletch_2,100_arrowshafts_(hop_b"
-  },
-  {
-    "lineno": 109,
-    "raw": "* Collect 11 Logs & make 10 into Planks. Make the 3 Waxwood Planks.",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "11 Logs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Collect 11 Logs & make 10 into Planks. Make the 3 Waxwood Planks.",
-    "name": "collect_11_logs_&_make_10_into_planks._make_the_3_"
-  },
-  {
-    "lineno": 110,
-    "raw": "* Buy 5x Bolts of Cloth & 100 Steel Nails",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "5x Bolts of Cloth"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Buy 5x Bolts of Cloth & 100 Steel Nails",
-    "name": "buy_5x_bolts_of_cloth_&_100_steel_nails"
-  },
-  {
-    "lineno": 111,
-    "raw": "* Return to [[Old Man Yarlo]] & continue Daddy's Home",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Old Man Yarlo"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Return to  & continue Daddy's Home",
-    "name": "return_to__&_continue_daddy's_home"
-  },
-  {
-    "lineno": 112,
-    "raw": "* Light 1 log & take the 1x log",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "1x log"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Light 1 log & take the 1x log",
-    "name": "light_1_log_&_take_the_1x_log"
-  },
-  {
-    "lineno": 113,
-    "raw": "* Collect Ashes",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Ashes"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Collect Ashes",
-    "name": "collect_ashes"
-  },
-  {
-    "lineno": 114,
-    "raw": "* Trade [[Aubury]] and buy 1x Fire/Air/Earth Pack, 2x Water Pack, 3x Mind Pack",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Aubury",
-      "X Fire",
-      "Air"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Trade  and buy 1x Fire/Air/Earth Pack, 2x Water Pack, 3x Mind Pack",
-    "name": "trade__and_buy_1x_fire/air/earth_pack,_2x_water_pa"
-  },
-  {
-    "lineno": 115,
-    "raw": "* Complete Daddy's home at Marlo (1)",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Complete Daddy's home at Marlo",
-    "name": "complete_daddy's_home_at_marlo"
-  },
-  {
-    "lineno": 116,
-    "raw": "* Open the crate",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Crate"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Open the crate",
-    "name": "open_the_crate"
-  },
-  {
-    "lineno": 117,
-    "raw": "* Bank at Varrock East bank",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 4",
-    "instruction": "Bank at Varrock East bank",
-    "name": "bank_at_varrock_east_bank"
-  },
-  {
-    "lineno": 119,
-    "raw": "* Withdraw: Leather Gloves (to pick nettles)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Leather Gloves (to pick nettles)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Withdraw: Leather Gloves (to pick nettles)",
-    "name": "withdraw:_leather_gloves_(to_pick_nettles)"
-  },
-  {
-    "lineno": 120,
-    "raw": "* Travel east to [[Regulus Cento]] & travel to Varlamore",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Regulus Cento"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Travel east to  & travel to Varlamore",
-    "name": "travel_east_to__&_travel_to_varlamore"
-  },
-  {
-    "lineno": 121,
-    "raw": "* Open the Minimap and Head South out of the City",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Minimap And Head South Out Of The City"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Open the Minimap and Head South out of the City",
-    "name": "open_the_minimap_and_head_south_out_of_the_city"
-  },
-  {
-    "lineno": 122,
-    "raw": "* Take the 3x Logs, Rope, Pestle & Mortar & Vial of Water",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "3x Logs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Take the 3x Logs, Rope, Pestle & Mortar & Vial of Water",
-    "name": "take_the_3x_logs,_rope,_pestle_&_mortar_&_vial_of_"
-  },
-  {
-    "lineno": 123,
-    "raw": "* Pick 2 Nettles [Ghost's Ahoy][Skippy & The Mogres]",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Skippy & The Mogres",
-    "panel_name": "Skippy & The Mogres",
-    "instruction": "Pick 2 Nettles",
-    "name": "pick_2_nettles"
-  },
-  {
-    "lineno": 124,
-    "raw": "* Collect 1 Sweetcorn [Recipe for Disaster]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "1 Sweetcorn"
-    ],
-    "dialogue_options": null,
-    "quest_tag": "Recipe for Disaster",
-    "panel_name": "Recipe for Disaster",
-    "instruction": "Collect 1 Sweetcorn",
-    "name": "collect_1_sweetcorn"
-  },
-  {
-    "lineno": 125,
-    "raw": "* Head West to the Hunter's Guild",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Head West to the Hunter's Guild",
-    "name": "head_west_to_the_hunter's_guild"
-  },
-  {
-    "lineno": 126,
-    "raw": "* Collect the needle",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "needle"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Collect the needle",
-    "name": "collect_the_needle"
-  },
-  {
-    "lineno": 127,
-    "raw": "* Collect a Bucket of Water by the bank chest",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Bucket of Water by the bank chest"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Collect a Bucket of Water by the bank chest",
-    "name": "collect_a_bucket_of_water_by_the_bank_chest"
-  },
-  {
-    "lineno": 128,
-    "raw": "* Deposit all in the bank chest",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Deposit all in the bank chest",
-    "name": "deposit_all_in_the_bank_chest"
-  },
-  {
-    "lineno": 129,
-    "raw": "* Enter [[Guildmaster Apatura]]'s building and go up both ladders",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Guildmaster Apatura"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Enter 's building and go up both ladders",
-    "name": "enter_'s_building_and_go_up_both_ladders"
-  },
-  {
-    "lineno": 130,
-    "raw": "* Loot 28 [[Eclipse Red]]s (hop worlds)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Loot 28 s (hop worlds)",
-    "name": "loot_28_s_(hop_worlds)"
-  },
-  {
-    "lineno": 131,
-    "raw": "* Deposit all.",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 5",
-    "instruction": "Deposit all.",
-    "name": "deposit_all."
-  },
-  {
-    "lineno": 133,
-    "raw": "* Withdraw: Coins.",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Coins"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Withdraw: Coins.",
-    "name": "withdraw:_coins."
-  },
-  {
-    "lineno": 134,
-    "raw": "* Collect a Bucket of Water by the bank chest",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Bucket of Water by the bank chest"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Collect a Bucket of Water by the bank chest",
-    "name": "collect_a_bucket_of_water_by_the_bank_chest"
-  },
-  {
-    "lineno": 135,
-    "raw": "* Head South-West to Sunset Coast. Be careful of the aggressive NPC's along the way as they can kill you if you do not pay attention.",
-    "type": "unknown",
-    "npc_names": [
-      "You If You Do Not Pay Attention"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Head South-West to Sunset Coast. Be careful of the aggressive NPC's along the way as they can kill you if you do not pay attention.",
-    "name": "head_south-west_to_sunset_coast._be_careful_of_the"
-  },
-  {
-    "lineno": 136,
-    "raw": "* Loot Fly Fishing Rod, Lobster Pot, 3x Iron Bar (hop worlds), Big Fishing Net & Feather",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Loot Fly Fishing Rod, Lobster Pot, 3x Iron Bar (hop worlds), Big Fishing Net & Feather",
-    "name": "loot_fly_fishing_rod,_lobster_pot,_3x_iron_bar_(ho"
-  },
-  {
-    "lineno": 137,
-    "raw": "* Travel with [[Antonia]] to Aldarin",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Antonia"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Travel with  to Aldarin",
-    "name": "travel_with__to_aldarin"
-  },
-  {
-    "lineno": 138,
-    "raw": "* Take Pot of Flour",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Pot of Flour"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Take Pot of Flour",
-    "name": "take_pot_of_flour"
-  },
-  {
-    "lineno": 139,
-    "raw": "* Buy 6 Onions [Yellow Dyes]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "6 Onions"
-    ],
-    "dialogue_options": null,
-    "quest_tag": "Yellow Dyes",
-    "panel_name": "Yellow Dyes",
-    "instruction": "Buy 6 Onions",
-    "name": "buy_6_onions"
-  },
-  {
-    "lineno": 140,
-    "raw": "* Pick a Cabbage [Black Knight's Fortress]",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Black Knight's Fortress",
-    "panel_name": "Black Knight's Fortress",
-    "instruction": "Pick a Cabbage",
-    "name": "pick_a_cabbage"
-  },
-  {
-    "lineno": 141,
-    "raw": "* Bank South and Deposit all",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 6",
-    "instruction": "Bank South and Deposit all",
-    "name": "bank_south_and_deposit_all"
-  },
-  {
-    "lineno": 143,
-    "raw": "* Withdraw: 28x Red Eclipse",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "28x Red Eclipse"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Withdraw: 28x Red Eclipse",
-    "name": "withdraw:_28x_red_eclipse"
-  },
-  {
-    "lineno": 144,
-    "raw": "* Head West and trade [[Antonius]] and sell all 28 at once.",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Antonius"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Head West and trade  and sell all 28 at once.",
-    "name": "head_west_and_trade__and_sell_all_28_at_once."
-  },
-  {
-    "lineno": 145,
-    "raw": "* Head East after selling Eclipse reds and buy 3 [[Sunbeam ale]]s from the [[Bartender (Sunlight's Sanctum)|Bartender]] in the pub. These give you a +1 agility boost to use the [[Taverly Dungeon]] shortcut later.",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Sunbeam ale",
-      "Bartender (Sunlight's Sanctum)|Bartender",
-      "Taverly Dungeon"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Head East after selling Eclipse reds and buy 3 s from the  in the pub. These give you a +1 agility boost to use the  shortcut later.",
-    "name": "head_east_after_selling_eclipse_reds_and_buy_3_s_f"
-  },
-  {
-    "lineno": 146,
-    "raw": "* Head north-east to the Gem Store & buy 9x Uncut Sapphire, 10x Uncut Emerald, and as many Uncut Rubies as possible. (If the shop is out of stock, try to get a few or skip this step and mine a star after unlocking teleports to buy a [[Bag full of gems]] with stardust)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Bag full of gems"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Head north-east to the Gem Store & buy 9x Uncut Sapphire, 10x Uncut Emerald, and as many Uncut Rubies as possible. (If the shop is out of stock, try to get a few or skip this step and mine a star after unlocking teleports to buy a  with stardust)",
-    "name": "head_north-east_to_the_gem_store_&_buy_9x_uncut_sa"
-  },
-  {
-    "lineno": 147,
-    "raw": "* Head South to [[Mistrock]] & deposit all there",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Mistrock"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Head South to  & deposit all there",
-    "name": "head_south_to__&_deposit_all_there"
-  },
-  {
-    "lineno": 148,
-    "raw": "* Buy Steel Pickaxe, 150 Wines, 20 mindbombs & 20 Stews (They are infinite stock so super fast to collect here)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "here)",
-      "Steel Pickaxe"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Buy Steel Pickaxe, 150 Wines, 20 mindbombs & 20 Stews (They are infinite stock so super fast to collect here)",
-    "name": "buy_steel_pickaxe,_150_wines,_20_mindbombs_&_20_st"
-  },
-  {
-    "lineno": 149,
-    "raw": "* Bank at [[Mistrock]] and deposit all.",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Mistrock"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 7",
-    "instruction": "Bank at  and deposit all.",
-    "name": "bank_at__and_deposit_all."
-  },
-  {
-    "lineno": 151,
-    "raw": "* Withdraw: Coins, Research Notes, Bronze Pickaxe (3 inventory Slots)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Coins",
-      "Research Notes",
-      "Bronze Pickaxe (3 inventory Slots)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Withdraw: Coins, Research Notes, Bronze Pickaxe",
-    "name": "withdraw:_coins,_research_notes,_bronze_pickaxe"
-  },
-  {
-    "lineno": 152,
-    "raw": "* Home Teleport to Lumbridge",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Home Teleport to Lumbridge",
-    "name": "home_teleport_to_lumbridge"
-  },
-  {
-    "lineno": 153,
-    "raw": "* Head to the Wizards Tower",
-    "type": "movement",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Head to the Wizards Tower",
-    "name": "head_to_the_wizards_tower"
-  },
-  {
-    "lineno": 154,
-    "raw": "* Take 3x Logs",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "3x Logs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Take 3x Logs",
-    "name": "take_3x_logs"
-  },
-  {
-    "lineno": 155,
-    "raw": "* Search the altar to collect the Ghost's skull. Run from the level 13 skeleton.",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Altar To Collect The Ghost'S Skull"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Search the altar to collect the Ghost's skull. Run from the level 13 skeleton.",
-    "name": "search_the_altar_to_collect_the_ghost's_skull._run"
-  },
-  {
-    "lineno": 156,
-    "raw": "* Complete Rune Mysteries",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Complete Rune Mysteries",
-    "name": "complete_rune_mysteries"
-  },
-  {
-    "lineno": 157,
-    "raw": "* Teleport to Rune Essence Mine [Lumbridge Easy Diary]",
-    "type": "movement",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Lumbridge Easy Diary",
-    "panel_name": "Lumbridge Easy Diary",
-    "instruction": "Teleport to Rune Essence Mine",
-    "name": "teleport_to_rune_essence_mine"
-  },
-  {
-    "lineno": 158,
-    "raw": "* Take 3x Logs",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "3x Logs"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Take 3x Logs",
-    "name": "take_3x_logs"
-  },
-  {
-    "lineno": 159,
-    "raw": "* Head North to Draynor and Deposit all",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 8",
-    "instruction": "Head North to Draynor and Deposit all",
-    "name": "head_north_to_draynor_and_deposit_all"
-  },
-  {
-    "lineno": 161,
-    "raw": "* Withdraw: Coins, Mind Runes, Small Fishing Net, Onion, Pickaxe, 454 Arrowshafts, 2x Wines (8 Inventory Slots)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Coins",
-      "Mind Runes",
-      "Small Fishing Net",
-      "Onion",
-      "Pickaxe",
-      "454 Arrowshafts",
-      "2x Wines (8 Inventory Slots)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Withdraw: Coins, Mind Runes, Small Fishing Net, Onion, Pickaxe, 454 Arrowshafts, 2x Wines",
-    "name": "withdraw:_coins,_mind_runes,_small_fishing_net,_on"
-  },
-  {
-    "lineno": 162,
-    "raw": "* Buy [[Chronicle]] & 10 Teleport cards from [[Diango]]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Buy  & 10 Teleport cards from",
-    "name": "buy__&_10_teleport_cards_from"
-  },
-  {
-    "lineno": 163,
-    "raw": "* Use Pages on Chronicle and wield",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Use Pages on Chronicle and wield",
-    "name": "use_pages_on_chronicle_and_wield"
-  },
-  {
-    "lineno": 164,
-    "raw": "* Head West and talk to [[Redbeard Frank]] to start Pirate's Treasure (1,1)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Redbeard Frank"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Head West and talk to  to start Pirate's Treasure",
-    "name": "head_west_and_talk_to__to_start_pirate's_treasure"
-  },
-  {
-    "lineno": 165,
-    "raw": "* Head South-West and buy a Harpoon, 50 Bait & 10 Feather packs. Take Apron from the wall & wear.",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Apron from the wall",
-      "Harpoon"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Head South-West and buy a Harpoon, 50 Bait & 10 Feather packs. Take Apron from the wall & wear.",
-    "name": "head_south-west_and_buy_a_harpoon,_50_bait_&_10_fe"
-  },
-  {
-    "lineno": 166,
-    "raw": "* Make 454 Headless Arrows",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Make 454 Headless Arrows",
-    "name": "make_454_headless_arrows"
-  },
-  {
-    "lineno": 167,
-    "raw": "* Take Ship to Karamja (Seamen dressed in blue)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Ship to Karamja (Seamen dressed in blue)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Take Ship to Karamja (Seamen dressed in blue)",
-    "name": "take_ship_to_karamja_(seamen_dressed_in_blue)"
-  },
-  {
-    "lineno": 168,
-    "raw": "* Talk to [[Luthas]] and ask for employment (1)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Luthas"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Talk to  and ask for employment",
-    "name": "talk_to__and_ask_for_employment"
-  },
-  {
-    "lineno": 169,
-    "raw": "* Fish Raw Shrimps [Karamja Easy Diary] Drop Shrimps",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Raw Shrimps"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Fish Raw Shrimps [Karamja Easy Diary] Drop Shrimps",
-    "name": "fish_raw_shrimps_[karamja_easy_diary]_drop_shrimps"
-  },
-  {
-    "lineno": 170,
-    "raw": "* Pick 10 bananas",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Pick 10 bananas",
-    "name": "pick_10_bananas"
-  },
-  {
-    "lineno": 171,
-    "raw": "* Buy Karamja Rum",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Karamja Rum"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Buy Karamja Rum",
-    "name": "buy_karamja_rum"
-  },
-  {
-    "lineno": 172,
-    "raw": "* Fill Crate with bananas and use Karamja rum on the crate",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Crate With Bananas And Use Karamja Rum On The Crate",
-      "Crate"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Fill Crate with bananas and use Karamja rum on the crate",
-    "name": "fill_crate_with_bananas_and_use_karamja_rum_on_the"
-  },
-  {
-    "lineno": 173,
-    "raw": "* Take boat back to Port Sarim [Karamja Easy Diary]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "boat back to Port Sarim"
-    ],
-    "dialogue_options": null,
-    "quest_tag": "Karamja Easy Diary",
-    "panel_name": "Karamja Easy Diary",
-    "instruction": "Take boat back to Port Sarim",
-    "name": "take_boat_back_to_port_sarim"
-  },
-  {
-    "lineno": 174,
-    "raw": "* Trade Wydin and buy Raw Chicken, 2x Raw Beef, 3x Flour & 2x redberries",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Raw Chicken"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Trade Wydin and buy Raw Chicken, 2x Raw Beef, 3x Flour & 2x redberries",
-    "name": "trade_wydin_and_buy_raw_chicken,_2x_raw_beef,_3x_f"
-  },
-  {
-    "lineno": 175,
-    "raw": "* Continue Pirate's Treasure by talking to Wydin to get employed, and collect the rum from the crate.",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "rum from the crate",
-      "employed"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Continue Pirate's Treasure by talking to Wydin to get employed, and collect the rum from the crate.",
-    "name": "continue_pirate's_treasure_by_talking_to_wydin_to_"
-  },
-  {
-    "lineno": 176,
-    "raw": "* Buy 8x Raw Sardines",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "8x Raw Sardines"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Buy 8x Raw Sardines",
-    "name": "buy_8x_raw_sardines"
-  },
-  {
-    "lineno": 177,
-    "raw": "* Use the Deposit box by Entrana and deposit everything except: Mind Runes, Coins, 1x Raw Beef, Karamja Rum, Onion, Pickaxe & 2x wines (8 Inventory Slots)",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Use the Deposit box by Entrana and deposit everything except: Mind Runes, Coins, 1x Raw Beef, Karamja Rum, Onion, Pickaxe & 2x wines",
-    "name": "use_the_deposit_box_by_entrana_and_deposit_everyth"
-  },
-  {
-    "lineno": 178,
-    "raw": "* Return to [[Redbeard Frank]]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Redbeard Frank"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Return to",
-    "name": "return_to"
-  },
-  {
-    "lineno": 179,
-    "raw": "* Head West to Betty and buy 2x Eye of Newt & 200 mind runes",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "2x Eye of Newt"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Head West to Betty and buy 2x Eye of Newt & 200 mind runes",
-    "name": "head_west_to_betty_and_buy_2x_eye_of_newt_&_200_mi"
-  },
-  {
-    "lineno": 180,
-    "raw": "* Head South-West and complete Witches Potion (Beef twice on range to burn)",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Head South-West and complete Witches Potion (Beef twice on range to burn)",
-    "name": "head_south-west_and_complete_witches_potion_(beef_"
-  },
-  {
-    "lineno": 181,
-    "raw": "* Take 2x Logs when getting the rat tail",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "2x Logs when getting the rat tail"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Take 2x Logs when getting the rat tail",
-    "name": "take_2x_logs_when_getting_the_rat_tail"
-  },
-  {
-    "lineno": 182,
-    "raw": "* Buy moulds: Ring, Amulet, 2x Necklace, Bracelet, Sickle, Tiara, 3x Needle & 50 Thread (from [[Rommik]] in Rimmington)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "moulds"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Buy moulds: Ring, Amulet, 2x Necklace, Bracelet, Sickle, Tiara, 3x Needle & 50 Thread (from  in Rimmington)",
-    "name": "buy_moulds:_ring,_amulet,_2x_necklace,_bracelet,_s"
-  },
-  {
-    "lineno": 183,
-    "raw": "* Buy 3x Buckets & Shears",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "3x Buckets"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Buy 3x Buckets & Shears",
-    "name": "buy_3x_buckets_&_shears"
-  },
-  {
-    "lineno": 184,
-    "raw": "* Head North-West and collect a Snape Grass",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Snape Grass"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Head North-West and collect a Snape Grass",
-    "name": "head_north-west_and_collect_a_snape_grass"
-  },
-  {
-    "lineno": 185,
-    "raw": "* Milk the cow 3x by Crafting guild",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Milk the cow 3x by Crafting guild",
-    "name": "milk_the_cow_3x_by_crafting_guild"
-  },
-  {
-    "lineno": 186,
-    "raw": "* Kill a cow & take everything",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Cow"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Kill a cow & take everything",
-    "name": "kill_a_cow_&_take_everything"
-  },
-  {
-    "lineno": 187,
-    "raw": "* Shear a sheep by the Makeover Mage",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Shear a sheep by the Makeover Mage",
-    "name": "shear_a_sheep_by_the_makeover_mage"
-  },
-  {
-    "lineno": 188,
-    "raw": "* Take Falador Crumbling wall Shortcut [Falador Easy Diary]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Falador Crumbling wall Shortcut"
-    ],
-    "dialogue_options": null,
-    "quest_tag": "Falador Easy Diary",
-    "panel_name": "Falador Easy Diary",
-    "instruction": "Take Falador Crumbling wall Shortcut",
-    "name": "take_falador_crumbling_wall_shortcut"
-  },
-  {
-    "lineno": 189,
-    "raw": "* Bank at Falador West Bank and deposit all",
-    "type": "unknown",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 9",
-    "instruction": "Bank at Falador West Bank and deposit all",
-    "name": "bank_at_falador_west_bank_and_deposit_all"
-  },
-  {
-    "lineno": 191,
-    "raw": "* Withdraw: Coins, Mind Runes, Raw Rat/Chicken/Beef, 10x Wines, Empty Bucket, Chest Key, Cheese (18 Inventory Slots)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Coins",
-      "Mind Runes",
-      "Raw Rat",
-      "Chicken",
-      "Beef",
-      "10x Wines",
-      "Empty Bucket",
-      "Chest Key",
-      "Cheese (18 Inventory Slots)"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Withdraw: Coins, Mind Runes, Raw Rat/Chicken/Beef, 10x Wines, Empty Bucket, Chest Key, Cheese",
-    "name": "withdraw:_coins,_mind_runes,_raw_rat/chicken/beef,"
-  },
-  {
-    "lineno": 192,
-    "raw": "* Get a haircut North [Falador Easy Diary]",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "haircut North"
-    ],
-    "dialogue_options": null,
-    "quest_tag": "Falador Easy Diary",
-    "panel_name": "Falador Easy Diary",
-    "instruction": "Get a haircut North",
-    "name": "get_a_haircut_north"
-  },
-  {
-    "lineno": 193,
-    "raw": "* Fill Bucket on Pump [Falador Easy Diary]",
-    "type": "object_interaction",
-    "npc_names": [],
-    "object_names": [
-      "Bucket On Pump"
-    ],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Falador Easy Diary",
-    "panel_name": "Falador Easy Diary",
-    "instruction": "Fill Bucket on Pump",
-    "name": "fill_bucket_on_pump"
-  },
-  {
-    "lineno": 194,
-    "raw": "* Head South and talk to the [[Squire]] and start Knight's Sword (1,2,1,1)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Squire",
-      "The"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      2,
-      1,
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Head South and talk to the  and start Knight's Sword",
-    "name": "head_south_and_talk_to_the__and_start_knight's_swo"
-  },
-  {
-    "lineno": 195,
-    "raw": "* Get a Mahogany Home Beginner Contract from [[Amy]] (try and do these whenever passing if viable (aka if Hosidius and you're nearby, detour and complete it. If not they're done later but may be inefficient) - Mahogany homes plugin or notepad to remember your tasks.",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "Mahogany Home Beginner Contract from"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Get a Mahogany Home Beginner Contract from  (try and do these whenever passing if viable (aka if Hosidius and you're nearby, detour and complete it. If not they're done later but may be inefficient) - Mahogany homes plugin or notepad to remember your tasks.",
-    "name": "get_a_mahogany_home_beginner_contract_from__(try_a"
-  },
-  {
-    "lineno": 196,
-    "raw": "* Kill a duck in Falador Park [Falador Easy Diary]",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Duck In Falador Park"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": null,
-    "quest_tag": "Falador Easy Diary",
-    "panel_name": "Falador Easy Diary",
-    "instruction": "Kill a duck in Falador Park",
-    "name": "kill_a_duck_in_falador_park"
-  },
-  {
-    "lineno": 197,
-    "raw": "* Buy 6x Woad Leaves from [[Wyson the Gardener]] (1,4)",
-    "type": "item_action",
-    "npc_names": [],
-    "object_names": [],
-    "items": [
-      "6x Woad Leaves from"
-    ],
-    "dialogue_options": [
-      1,
-      4
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Buy 6x Woad Leaves from",
-    "name": "buy_6x_woad_leaves_from"
-  },
-  {
-    "lineno": 198,
-    "raw": "* Head North of Falador and kill a Black Bear (safespot on trees as it is a 2x2). Collect the Raw Bear Meat, Bones & fur.",
-    "type": "unknown",
-    "npc_names": [
-      "Black Bear"
-    ],
-    "object_names": [],
-    "items": [
-      "Raw Bear Meat"
-    ],
-    "dialogue_options": null,
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Head North of Falador and kill a Black Bear (safespot on trees as it is a 2x2). Collect the Raw Bear Meat, Bones & fur.",
-    "name": "head_north_of_falador_and_kill_a_black_bear_(safes"
-  },
-  {
-    "lineno": 199,
-    "raw": "* Head to Taverly and talk to the [[boy]] to start Witches House (1,1)",
-    "type": "movement",
-    "npc_names": [],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      1,
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Head to Taverly and talk to the  to start Witches House",
-    "name": "head_to_taverly_and_talk_to_the__to_start_witches_"
-  },
-  {
-    "lineno": 200,
-    "raw": "* Head North and talk to [[Kaqemeex]] to start Druidic Ritual (2,1)",
-    "type": "npc_interaction",
-    "npc_names": [
-      "Kaqemeex"
-    ],
-    "object_names": [],
-    "items": [],
-    "dialogue_options": [
-      2,
-      1
-    ],
-    "quest_tag": null,
-    "panel_name": "Bank 10",
-    "instruction": "Head North and talk to  to start Druidic Ritual",
-    "name": "head_north_and_talk_to__to_start_druidic_ritual"
   }
 ]

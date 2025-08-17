@@ -73,6 +73,10 @@ def clean_database(input_path, cleaned_output_path, ids_output_path):
             print(f"Error: Input file {input_path} is empty or invalid")
             return
         
+        # Sort zones by name if present
+        if 'zones' in data:
+            data['zones'] = sorted(data['zones'], key=lambda z: z['name'])
+        
         # Sort keys for cleaned JSON
         sorted_data = {key: data[key] for key in sorted(data.keys())}
         for key in sorted_data:
@@ -88,10 +92,11 @@ def clean_database(input_path, cleaned_output_path, ids_output_path):
         except Exception as e:
             print(f"Error generating {cleaned_output_path}: {e}")
         
-        # Create lean database with only npcs and objects (without mentions)
+        # Create lean database with only npcs, objects, and zones (without mentions)
         lean_data = {
             'npcs': {},
-            'objects': {}
+            'objects': {},
+            'zones': {}
         }
         try:
             for key in sorted(data['npcs'].keys()):
@@ -109,11 +114,19 @@ def clean_database(input_path, cleaned_output_path, ids_output_path):
                     'name': data['objects'][key]['name'],
                     'worldpoints': data['objects'][key]['worldpoints']
                 }
+            if 'zones' in data:
+                for zone in data['zones']:
+                    lean_data['zones'][zone['name']] = {
+                        'worldpoints': [
+                            [zone['worldpoints'][0]['x'], zone['worldpoints'][0]['y'], zone['worldpoints'][0]['plane']],
+                            [zone['worldpoints'][1]['x'], zone['worldpoints'][1]['y'], zone['worldpoints'][1]['plane']]
+                        ]
+                    }
             
             with open(ids_output_path, 'w', encoding='utf-8') as f:
                 json.dump(lean_data, f, indent=2, cls=CompactListEncoder)
             post_process_json(ids_output_path)
-            print(f"Generated NPC and object IDs database at {ids_output_path}")
+            print(f"Generated NPC, object, and zone database at {ids_output_path}")
         except Exception as e:
             print(f"Error generating {ids_output_path}: {e}")
     

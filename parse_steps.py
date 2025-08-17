@@ -55,7 +55,6 @@ def classify_line(line: str) -> str:
         for p in patterns:
             if re.search(p, l):
                 return t
-    # fallbacks
     if NPC_WIKI_RE.search(line):
         return "npc_interaction"
     return "unknown"
@@ -75,10 +74,8 @@ def parse_dialogue(line: str) -> Optional[List[int]]:
 
 def parse_entity_names(line: str, verbs: List[str]) -> List[str]:
     names = []
-    # [[Name]]
     for m in NPC_WIKI_RE.finditer(line):
         names.append(m.group(1).strip())
-    # man/woman
     m = CHOICE_SLASH_RE.search(line)
     if m:
         a = m.group(1).strip().title()
@@ -87,7 +84,6 @@ def parse_entity_names(line: str, verbs: List[str]) -> List[str]:
             names.append(a)
         if b not in names:
             names.append(b)
-    # "verb a name" e.g. "talk to a man", "chop a tree"
     for verb in verbs:
         rgx = re.compile(rf"\b{verb}\s+(a|an|the)?\s*([A-Za-z '\-]+)\b", re.IGNORECASE)
         m2 = rgx.search(line)
@@ -103,13 +99,11 @@ def parse_npc_names(line: str) -> List[str]:
 
 def parse_object_names(line: str) -> List[str]:
     names = parse_entity_names(line, ["climb", "enter", "open", "close", "search", "fill", "empty", "chop", "mine", "fish", "catch", "hunt", "thieve from", "thieve"])
-    # "on the sink"
     m = re.search(r"\bon the\s+([A-Za-z '\-]+)\b", line, re.I)
     if m:
         cand = m.group(1).strip().title()
         if cand not in names:
             names.append(cand)
-    # "next to the stairs"
     m2 = re.search(r"\bnext to the\s+([A-Za-z '\-]+)\b", line, re.I)
     if m2:
         cand = m2.group(1).strip().title()
@@ -117,42 +111,67 @@ def parse_object_names(line: str) -> List[str]:
             names.append(cand)
     return names
 
-def parse_items(line: str) -> List[str]:
+def parse_items(line: str) -> List[Dict[str, Any]]:
     items = []
-    # Quoted "Lobster"
     for m in re.finditer(r'"([^"]+)"', line):
-        items.append(m.group(1).strip())
-    # use X on Y
+        item_name = m.group(1).strip()
+        quantity = 1
+        if re.match(r"^\d+x?\s", item_name):
+            qty_match = re.match(r"^(\d+)x?\s*(.+)", item_name)
+            if qty_match:
+                quantity = int(qty_match.group(1))
+                item_name = qty_match.group(2).strip()
+        items.append({"name": item_name, "quantity": quantity})
     m = re.search(r"\buse\s+([ ^on]+?)\s+on\s+(.+)", line, re.I)
     if m:
         left = m.group(1).strip(" .,:;")
         right = m.group(2).strip(" .,:;")
-        items.extend([left, right])
-    # withdraw/deposit : list
+        for item in [left, right]:
+            quantity = 1
+            if re.match(r"^\d+x?\s", item):
+                qty_match = re.match(r"^(\d+)x?\s*(.+)", item)
+                if qty_match:
+                    quantity = int(qty_match.group(1))
+                    item = qty_match.group(2).strip()
+            items.append({"name": item, "quantity": quantity})
     m2 = re.search(r"\b(withdraw|deposit)\s*:\s*(.+)", line, re.I)
     if m2:
         payload = m2.group(2)
         for token in re.split(r"[,;/]| and ", payload):
             t = token.strip(" .")
             if t:
-                items.append(t)
-    # verbs like pick up, take, collect...
+                quantity = 1
+                if re.match(r"^\d+x?\s", t):
+                    qty_match = re.match(r"^(\d+)x?\s*(.+)", t)
+                    if qty_match:
+                        quantity = int(qty_match.group(1))
+                        t = qty_match.group(2).strip()
+                items.append({"name": t, "quantity": quantity})
     for verb in ["pick up", "take", "collect", "obtain", "get", "buy", "purchase", "sell", "equip", "wear", "wield", "drop", "destroy"]:
         rgx = re.compile(rf"\b{verb}\s+([A-Za-z0-9 '\-()#]+)", re.I)
         m3 = rgx.search(line)
         if m3:
             cand = m3.group(1).split("[")[0].strip(" .")
             if cand:
-                items.append(cand)
-    # Post-process: strip articles, split +/and/&
+                quantity = 1
+                if re.match(r"^\d+x?\s", cand):
+                    qty_match = re.match(r"^(\d+)x?\s*(.+)", cand)
+                    if qty_match:
+                        quantity = int(qty_match.group(1))
+                        cand = qty_match.group(2).strip()
+                items.append({"name": cand, "quantity": quantity})
     uniq = []
-    for i in items:
-        i = re.sub(r"^(the|a|an)\s+", "", i, re.I).strip()
-        subs = re.split(r"\s*\+\s*|\s+and\s+|&", i)
+    seen = set()
+    for item in items:
+        name = re.sub(r"^(the|a|an)\s+", "", item["name"], re.I).strip()
+        name = re.sub(r"\s*\(\d+\s+inventory\s+slots?\)", "", name, re.I).strip()
+        name = re.sub(r"\(.*?\)", "", name).strip()
+        subs = re.split(r"\s*\+\s*|\s+and\s+|&", name)
         for sub in subs:
             sub = sub.strip()
-            if sub and sub not in uniq:
-                uniq.append(sub)
+            if sub and len(sub) > 2 and sub.lower() not in {"the", "a", "an"} and sub not in seen:
+                seen.add(sub)
+                uniq.append({"name": sub, "quantity": item["quantity"]})
     return uniq
 
 def parse_quest_tag(line: str) -> Optional[str]:

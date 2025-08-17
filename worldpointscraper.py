@@ -42,7 +42,6 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 comment, name, id_val = match.group(6), match.group(7), match.group(8)
             else:  # No comment
                 comment, name, id_val = None, match.group(10), match.group(11)
-            # Handle ObjectID references (not expected in NpcID.java, but for consistency)
             if id_val.startswith('ObjectID.'):
                 obj_key = id_val.split('.')[1]
                 print(f"Warning: Unexpected ObjectID.{obj_key} reference in {npc_path}")
@@ -52,7 +51,7 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 'name': comment.strip() if comment and comment.strip() else name.replace('_', ' ')
             }
     
-    # Parse ObjectID.java (standard RuneLite API IDs)
+    # Parse ObjectID.java
     if object_path.exists():
         with open(object_path, 'r', encoding='utf-8') as f:
             text = f.read()
@@ -63,7 +62,6 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 comment, name, id_val = match.group(6), match.group(7), match.group(8)
             else:  # No comment
                 comment, name, id_val = None, match.group(10), match.group(11)
-            # Handle ObjectID references (not expected in ObjectID.java)
             if id_val.startswith('ObjectID.'):
                 obj_key = id_val.split('.')[1]
                 print(f"Warning: Unexpected ObjectID.{obj_key} reference in {object_path}")
@@ -73,7 +71,7 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 'name': comment.strip() if comment and comment.strip() else name.replace('_', ' ')
             }
     
-    # Parse ObjectID1.java (custom Quest Helper IDs)
+    # Parse ObjectID1.java
     if custom_object_path.exists():
         with open(custom_object_path, 'r', encoding='utf-8') as f:
             text = f.read()
@@ -85,12 +83,10 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 comment, name, id_val = match.group(6), match.group(7), match.group(8)
             else:  # No comment
                 comment, name, id_val = None, match.group(10), match.group(11)
-            # Handle ObjectID references (not expected in ObjectID1.java)
             if id_val.startswith('ObjectID.'):
                 obj_key = id_val.split('.')[1]
                 print(f"Warning: Unexpected ObjectID.{obj_key} reference in {custom_object_path}")
                 continue
-            # Only add if not already in maps['objects'] to avoid overwriting standard IDs
             if name not in maps['objects']:
                 maps['objects'][name] = {
                     'id': int(id_val),
@@ -101,7 +97,7 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
     else:
         print(f"Warning: {custom_object_path} not found, skipping custom ObjectIDs")
     
-    # Parse QHObjectID.java (additional custom Quest Helper IDs)
+    # Parse QHObjectID.java
     if qh_object_path.exists():
         with open(qh_object_path, 'r', encoding='utf-8') as f:
             text = f.read()
@@ -113,7 +109,6 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 comment, name, id_val, obj_ref = match.group(6), match.group(7), match.group(8), match.group(9)
             else:  # No comment
                 comment, name, id_val, obj_ref = None, match.group(10), match.group(11), match.group(12)
-            # Handle ObjectID references
             if id_val.startswith('ObjectID.'):
                 obj_key = id_val.split('.')[1]
                 if obj_key in maps['objects']:
@@ -121,7 +116,6 @@ def load_id_files(npc_path, object_path, custom_object_path, qh_object_path):
                 else:
                     print(f"Warning: ObjectID.{obj_key} referenced in {qh_object_path} but not found in ObjectID.java")
                     continue
-            # Only add if not already in maps['objects'] to avoid overwriting standard or ObjectID1 IDs
             if name not in maps['objects']:
                 maps['objects'][name] = {
                     'id': int(id_val),
@@ -144,18 +138,19 @@ def process_file(args):
         'zones': [],
         'npcs': {},
         'objects': {},
-        'missing_ids': []  # Track missing IDs
+        'missing_ids': [],
+        'invalid_zones': []  # Track invalid zones
     }
     
     try:
         text = jf.read_text(encoding='utf-8', errors='ignore')
         lines = text.splitlines()
         file_path = truncate_path(jf)
+        quest_name = jf.stem
         
         for match in COMBINED_RE.finditer(text):
             line_no = text[:match.start()].count('\n') + 1
             line_text = lines[line_no - 1] if 0 <= line_no - 1 < len(lines) else ""
-            # Replace tabs with spaces and strip leading/trailing whitespace
             line_text = line_text.replace('\t', '    ').strip()
             
             # WorldPoint (direct)
@@ -264,14 +259,32 @@ def process_file(args):
             # Zone
             elif match.group(16) is not None:
                 var_line = lines[line_no - 1]
-                variable_name = re.match(r'^\s*(\w+)\s*=', var_line)
-                variable_name = variable_name.group(1) if variable_name else "Unknown Zone"
+                variable_name_match = re.search(r'(\w+)\s*=\s*new\s+Zone', var_line)
+                variable_name = variable_name_match.group(1) if variable_name_match else "UnknownZone"
+                enhanced_name = f"{variable_name}{quest_name}"
+                wp1 = {'x': int(match.group(17)), 'y': int(match.group(18)), 'plane': int(match.group(19) or 0)}
+                wp2 = {'x': int(match.group(20)), 'y': int(match.group(21)), 'plane': int(match.group(22) or 0)}
+                # Validate zone coordinates
+                if wp1['x'] < 0 or wp1['y'] < 0 or wp2['x'] < 0 or wp2['y'] < 0:
+                    results['invalid_zones'].append({
+                        'name': enhanced_name,
+                        'file': file_path,
+                        'line': line_no,
+                        'issue': 'Negative coordinates detected'
+                    })
+                    print(f"Warning: Invalid zone coordinates in {file_path} at line {line_no}: {line_text}")
+                    continue
+                if variable_name == "UnknownZone":
+                    results['invalid_zones'].append({
+                        'name': enhanced_name,
+                        'file': file_path,
+                        'line': line_no,
+                        'issue': 'Failed to parse variable name'
+                    })
+                    print(f"Warning: Unknown zone name in {file_path} at line {line_no}: {line_text}")
                 results['zones'].append({
-                    'name': variable_name,
-                    'worldpoints': [
-                        {'x': int(match.group(17)), 'y': int(match.group(18)), 'plane': int(match.group(19) or 0)},
-                        {'x': int(match.group(20)), 'y': int(match.group(21)), 'plane': int(match.group(22) or 0)}
-                    ],
+                    'name': enhanced_name,
+                    'worldpoints': [wp1, wp2],
                     'file': file_path,
                     'line': line_no,
                     'line_text': line_text
@@ -312,7 +325,8 @@ def aggregate_results(results_list):
         'objects': {},
         'worldpoints': [],
         'zones': [],
-        'missing_ids': []  # Aggregate missing IDs
+        'missing_ids': [],
+        'invalid_zones': []
     }
     
     for res in results_list:
@@ -341,6 +355,7 @@ def aggregate_results(results_list):
         aggregated['worldpoints'].extend(res['wps'])
         aggregated['zones'].extend(res['zones'])
         aggregated['missing_ids'].extend(res['missing_ids'])
+        aggregated['invalid_zones'].extend(res['invalid_zones'])
     
     # Deduplicate worldpoints
     for key, data in aggregated['npcs'].items():
@@ -354,13 +369,10 @@ def aggregate_results(results_list):
 class CompactListEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, list):
-            # If the list contains only numbers, format it on one line
             if all(isinstance(item, (int, float)) for item in obj):
                 return '[' + ','.join(str(item) for item in obj) + ']'
-            # If the list contains lists, process them recursively
             if all(isinstance(item, list) for item in obj):
                 return '[' + ','.join(self.default(item) for item in obj) + ']'
-            # Otherwise, return the list as-is for default JSON encoding
             return obj
         return super().default(obj)
 
@@ -405,11 +417,26 @@ def main():
     else:
         print("\nAll NPCs and Object IDs found in idmaps!")
     
-    # Optionally, save missing IDs to a log file
+    # Print summary of invalid zones
+    if aggregated['invalid_zones']:
+        print("\nInvalid Zones:")
+        for zone in aggregated['invalid_zones']:
+            print(f"Zone {zone['name']} in {zone['file']} at line {zone['line']}: {zone['issue']}")
+        print(f"Total invalid zones: {len(aggregated['invalid_zones'])}")
+    else:
+        print("\nAll zones parsed successfully!")
+    
+    # Save missing IDs to a log file
     if aggregated['missing_ids']:
         with open(script_dir / "missing_ids.log", "w", encoding='utf-8') as f:
             for kind, entity_key, file_path in aggregated['missing_ids']:
                 f.write(f"{kind} {entity_key} missing in {file_path}\n")
+    
+    # Save invalid zones to a log file
+    if aggregated['invalid_zones']:
+        with open(script_dir / "invalid_zones.log", "w", encoding='utf-8') as f:
+            for zone in aggregated['invalid_zones']:
+                f.write(f"Zone {zone['name']} in {zone['file']} at line {zone['line']}: {zone['issue']}\n")
     
     with open(args.out, 'w', encoding='utf-8') as f:
         json.dump(aggregated, f, indent=2, cls=CompactListEncoder)

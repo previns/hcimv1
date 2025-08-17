@@ -70,7 +70,6 @@ A lot of the time the guide will assume you have combat gear on you. Sometimes i
 * Collect 3x Logs [Tree Gnome Village]
 * Return to Draynor & talk to [[Friendly Forester]] and obtain Forestry kit (right click shop and buy 1)
 * Bank at Draynor and Deposit all
-}}
 {{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
 {{Extimage|https://i.imgur.com/TIBQAxr.png|right|400|}}
 <!-- Bank 2 -->
@@ -96,8 +95,8 @@ A lot of the time the guide will assume you have combat gear on you. Sometimes i
 * Use your feather on the enchanted scroll in your inventory
 * Talk to [[Jennifer_(Shayzien)]] for Client of Kourend (3,2)
 * Take Tinderbox
-* Take Wizard Hat & Orange Dye [Shadow of the Storm, Goblin Diplomacy]
-* Buy Chefs Hat [Cooking Guild]
+* Take Wizard Hat & Orange Dye [Shadow of the Storm, Goblin Diplomacy] from house to the west (Shayzien Styles)
+* Trade [[Robyn]] and buy a [[Chef's Hat]]  [Cook's guild]
 * Home teleport to Lumbridge
 * Talk to [[Bob]] and buy a Steel Axe
 * Talk to [[Restless Ghost]] (1)
@@ -111,182 +110,4 @@ A lot of the time the guide will assume you have combat gear on you. Sometimes i
 * Head east and Talk to [[Gertude]] (1) [Gertrudes Cat]
 * Collect a Doogle Leaf south of Gertrude
 * Bank at Varrock West Bank and deposit all
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-
-{{Extimage|https://i.imgur.com/Kb3Mswu.png|right|400|}}
-<!-- Bank 3 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Coins, Bones, Beer (3 Inventory Spaces)
-* Use the bones on the [[Stray Dog]] whenever you find him
-* Head East and buy an Air Staff from [[Zaff]]. Equip it.
-* Head South & Talk to [[Aris]] and start Demon Slayer (1,2,3,4).
-* Head South & Trade [[Thessalia]] [Varrock Easy Diary]
-* Buy Pink Skirt, Brown Apron & Silk. Wear Brown Apron & Pink Skirt in honour of Faux
-* Head South to the Sword Shop and go up the ladder. Loot the lit candle.
-* Head East and talk to [[Dr Harlow]] (2, talk again)[Vampyre Slayer]
-* Head North
-* Talk to [[Romeo]] (3,1) [Romeo & Juliet]
-* Buy a Newspaper from [[Benny]](1,1)
-* Talk to [[Shilop]] to continue Gertrudes Cat (2,2)
-* Talk to [[Noah]] (1,3) [Children of the Sun]
-* Complete Children of the Sun
-* Talk to [[Sir Prysin]] (3,1,2,2,1,1) [Demon Slayer]
-* Head North and go up 2x Stairs and talk to [[Captain Rovin]] (3,1,2,2,3,1) [Demon Slayer]
-* Return down the stairs and talk to [[Reldo]] and start Shield of Arrav (1,1).
-* Search for book and talk to [[Reldo]] again (1)
-* Head East and up the stairs in the Kitchen.
-* Collect both buckets and fill one up downstairs. Use Bucket of Water on drain outside then refill it.
-* Take the Pie Dish [Knight's Sword]
-* Head to [[King Roald]] and start Priest in Peril (1,1,3)
-* Talk to [[Marlo]] and start Daddy's Home (in a house the east of the castle) (2,3,3)
-* Pick up the Saw
-* Enter Varrock Sewer and take the North-West path to collect the Demon Slayer Key
-* Enter Varrock Museum and head downstairs and talk to [[Orlando Smith]] (1) and complete the [[Natural History Quiz]] for 9 slayer and hunter and 28 kudos.
-* Bank at Varrock East bank and Deposit all
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-{{Extimage|https://i.imgur.com/LN5QmC5.png|right|400|}}
-<!-- Bank 4 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Coins, Saw, Hammer, Knife, Bronze Axe, Research Package, Tinderbox (7 Inventory Slots)
-* Talk to [[Aubury]] to continue Rune Mysteries (2)
-* Light both logs in the house right next to the rune shop.
-* Destroy all the furniture in the house
-* Talk to [[Old Man Yarlo]] to continue Daddy's Home (2)
-* Take 2x Logs & 2x ashes after cutscene
-* Search crates for 3x Waxwood log
-* Bank the ashes
-* Head North-East to the Lumberyard
-* Cut the Dying tree [Varrock Easy Diary]
-* Collect the Logs & fletch 2,100 Arrowshafts (hop between 2 worlds)
-* Collect 11 Logs & make 10 into Planks. Make the 3 Waxwood Planks.
-* Buy 5x Bolts of Cloth & 100 Steel Nails
-* Return to [[Old Man Yarlo]] & continue Daddy's Home
-* Light 1 log & take the 1x log
-* Collect Ashes
-* Trade [[Aubury]] and buy 1x Fire/Air/Earth Pack, 2x Water Pack, 3x Mind Pack
-* Complete Daddy's home at Marlo (1)
-* Open the crate
-* Bank at Varrock East bank
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-{{Extimage|https://i.imgur.com/ssbACWr.png|right|300|}}
-<!-- Bank 5 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Leather Gloves (to pick nettles) 
-* Travel east to [[Regulus Cento]] & travel to Varlamore
-* Open the Minimap and Head South out of the City
-* Take the 3x Logs, Rope, Pestle & Mortar & Vial of Water
-* Pick 2 Nettles [Ghost's Ahoy][Skippy & The Mogres]
-* Collect 1 Sweetcorn [Recipe for Disaster]
-* Head West to the Hunter's Guild
-* Collect the needle
-* Collect a Bucket of Water by the bank chest
-* Deposit all in the bank chest
-* Enter [[Guildmaster Apatura]]'s building and go up both ladders
-* Loot 28 [[Eclipse Red]]s (hop worlds)
-* Deposit all.
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-{{Extimage|https://i.imgur.com/eQtO04U.png|right|400|}}
-<!-- Bank 6 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Coins.
-* Collect a Bucket of Water by the bank chest
-* Head South-West to Sunset Coast. Be careful of the aggressive NPC's along the way as they can kill you if you do not pay attention. 
-* Loot Fly Fishing Rod, Lobster Pot, 3x Iron Bar (hop worlds), Big Fishing Net & Feather
-* Travel with [[Antonia]] to Aldarin
-* Take Pot of Flour
-* Buy 6 Onions [Yellow Dyes]
-* Pick a Cabbage [Black Knight's Fortress]
-* Bank South and Deposit all
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-<!-- Bank 7 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: 28x Red Eclipse
-* Head West and trade [[Antonius]] and sell all 28 at once.
-* Head East after selling Eclipse reds and buy 3 [[Sunbeam ale]]s from the [[Bartender (Sunlight's Sanctum)|Bartender]] in the pub. These give you a +1 agility boost to use the [[Taverly Dungeon]] shortcut later.
-* Head north-east to the Gem Store & buy 9x Uncut Sapphire, 10x Uncut Emerald, and as many Uncut Rubies as possible. (If the shop is out of stock, try to get a few or skip this step and mine a star after unlocking teleports to buy a [[Bag full of gems]] with stardust)
-* Head South to [[Mistrock]] & deposit all there
-* Buy Steel Pickaxe, 150 Wines, 20 mindbombs & 20 Stews (They are infinite stock so super fast to collect here)
-* Bank at [[Mistrock]] and deposit all.
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-{{Extimage|https://i.imgur.com/tJir2v9.png|right|400|}}
-<!-- Bank 8 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Coins, Research Notes, Bronze Pickaxe (3 inventory Slots)
-* Home Teleport to Lumbridge
-* Head to the Wizards Tower
-* Take 3x Logs
-* Search the altar to collect the Ghost's skull. Run from the level 13 skeleton.
-* Complete Rune Mysteries
-* Teleport to Rune Essence Mine [Lumbridge Easy Diary]
-* Take 3x Logs
-* Head North to Draynor and Deposit all
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-{{Extimage|https://i.imgur.com/c2fdIt7.png|right|400|}}
-{{Extimage|https://i.imgur.com/Ptk1UGi.png|right|400|}}
-<!-- Bank 9 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Coins, Mind Runes, Small Fishing Net, Onion, Pickaxe, 454 Arrowshafts, 2x Wines (8 Inventory Slots)
-* Buy [[Chronicle]] & 10 Teleport cards from [[Diango]]
-* Use Pages on Chronicle and wield
-* Head West and talk to [[Redbeard Frank]] to start Pirate's Treasure (1,1)
-* Head South-West and buy a Harpoon, 50 Bait & 10 Feather packs. Take Apron from the wall & wear.
-* Make 454 Headless Arrows
-* Take Ship to Karamja (Seamen dressed in blue)
-* Talk to [[Luthas]] and ask for employment (1)
-* Fish Raw Shrimps [Karamja Easy Diary] Drop Shrimps
-* Pick 10 bananas
-* Buy Karamja Rum
-* Fill Crate with bananas and use Karamja rum on the crate
-* Take boat back to Port Sarim [Karamja Easy Diary]
-* Trade Wydin and buy Raw Chicken, 2x Raw Beef, 3x Flour & 2x redberries
-* Continue Pirate's Treasure by talking to Wydin to get employed, and collect the rum from the crate.
-* Buy 8x Raw Sardines
-* Use the Deposit box by Entrana and deposit everything except: Mind Runes, Coins, 1x Raw Beef, Karamja Rum, Onion, Pickaxe & 2x wines (8 Inventory Slots)
-* Return to [[Redbeard Frank]]
-* Head West to Betty and buy 2x Eye of Newt & 200 mind runes
-* Head South-West and complete Witches Potion (Beef twice on range to burn)
-* Take 2x Logs when getting the rat tail
-* Buy moulds: Ring, Amulet, 2x Necklace, Bracelet, Sickle, Tiara, 3x Needle & 50 Thread (from [[Rommik]] in Rimmington)
-* Buy 3x Buckets & Shears
-* Head North-West and collect a Snape Grass
-* Milk the cow 3x by Crafting guild
-* Kill a cow & take everything
-* Shear a sheep by the Makeover Mage
-* Take Falador Crumbling wall Shortcut [Falador Easy Diary]
-* Bank at Falador West Bank and deposit all
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-{{Extimage|https://i.imgur.com/UdQ5UAc.png|right|400|}}
-<!-- Bank 10 -->
-{{Checklist|title=Bank {{#expr:{{#var:bankNumber}}+1}}|
-* Withdraw: Coins, Mind Runes, Raw Rat/Chicken/Beef, 10x Wines, Empty Bucket, Chest Key, Cheese (18 Inventory Slots)
-* Get a haircut North [Falador Easy Diary]
-* Fill Bucket on Pump [Falador Easy Diary]
-* Head South and talk to the [[Squire]] and start Knight's Sword (1,2,1,1)
-* Get a Mahogany Home Beginner Contract from [[Amy]] (try and do these whenever passing if viable (aka if Hosidius and you're nearby, detour and complete it. If not they're done later but may be inefficient) - Mahogany homes plugin or notepad to remember your tasks.
-* Kill a duck in Falador Park [Falador Easy Diary]
-* Buy 6x Woad Leaves from [[Wyson the Gardener]] (1,4)
-* Head North of Falador and kill a Black Bear (safespot on trees as it is a 2x2). Collect the Raw Bear Meat, Bones & fur.
-* Head to Taverly and talk to the [[boy]] to start Witches House (1,1)
-* Head North and talk to [[Kaqemeex]] to start Druidic Ritual (2,1)
-}}
-{{Var|bankNumber|{{#expr:{{#var:bankNumber}}+1}}}}
-* Complete Witches House quest - Safespot guide for the spider: https://youtu.be/bDB351j-qZI?t=178
-{{Youtube|bDB351j-qZI}}
-{{Checklist|title=|
-* Keep the Door Key [Mournings End Pt 2]
-* Head South and buy 1x Vial of Water Pack
-* Complete Druidic Ritual
-* Chronicle to Varrock
-* Go upstairs in Blue Moon inn and continue Pirates Treasure
-* Talk to [[Baraek]] (3,1) [Shield of Arrav]
-* Talk to [[Reldo]] (2) [Knights Sword]
-* Bank at East Bank
 }}
